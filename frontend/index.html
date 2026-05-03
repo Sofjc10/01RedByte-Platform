@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01RedByte | Soluciones Digitales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <img src="imagenes/logo.png" alt="01RedByte" class="logo-nav">
+            <nav class="nav-links">
+                <a href="#hero">Inicio</a>
+                <a href="#services">Servicios</a>
+                <a href="#vitrina">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+                <button id="btn-admin-mode" class="btn-outline">Admin</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <img src="imagenes/logo.png" alt="RedByte Central" class="logo-hero">
+                <h1 class="glow-text">01RedByte</h1>
+                <p class="subtitle">Impulsamos negocios locales con presencia digital profesional</p>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Diseño Web</h3>
+                        <p>Páginas modernas para negocios de barrio.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Identidad Digital</h3>
+                        <p>Tu marca visible para todo el mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="admin-panel" class="admin hidden">
+            <div class="container">
+                <h2 class="section-title">Panel Administrativo</h2>
+                <form id="project-form" class="admin-form">
+                    <input type="text" id="name" placeholder="Nombre del negocio" required>
+                    <input type="text" id="service" placeholder="Tipo de servicio" required>
+                    <input type="text" id="img" placeholder="Ruta de imagen (ej: imagenes/proyecto1.png)" required>
+                    <input type="hidden" id="edit-index">
+                    <div class="admin-buttons">
+                        <button type="submit" class="btn-primary">Guardar Proyecto</button>
+                        <button type="button" id="btn-close-admin" class="btn-outline">Salir de Admin</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="vitrina" class="vitrina">
+            <div class="container">
+                <h2 class="section-title">Nuestra Vitrina</h2>
+                <div id="projects-grid" class="projects-grid"></div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <form class="contact-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <textarea placeholder="Cuéntanos sobre tu negocio o el servicio que necesitas"></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 01RedByte - Reduciendo la brecha digital</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
