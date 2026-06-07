@@ -1,5 +1,14 @@
 let projects = JSON.parse(localStorage.getItem('projects')) || [
-    { name: "Barbería Classic", service: "Sitio Web Corporativo", img: "https://via.placeholder.com/400x200" }
+    { 
+        name: "Barbería Classic", 
+        service: "Sitio Web Corporativo", 
+        img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" 
+    },
+    { 
+        name: "Peluquería Canina 'Peluditos'", 
+        service: "Catálogo de Servicios", 
+        img: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" 
+    }
 ];
 
 const projectsGrid = document.getElementById('projects-grid');
