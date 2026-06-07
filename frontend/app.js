@@ -41,37 +41,46 @@ function renderProjects() {
     });
 }
 
-btnAdminMode.onclick = () => {
-    adminActive = !adminActive;
-    adminPanel.classList.toggle('hidden');
-    renderProjects();
-    if(adminActive) window.scrollTo({ top: adminPanel.offsetTop - 70, behavior: 'smooth' });
-};
+// PROTECCIÓN: Solo se activa el botón admin si existe en el HTML actual
+if (btnAdminMode && adminPanel) {
+    btnAdminMode.onclick = () => {
+        adminActive = !adminActive;
+        adminPanel.classList.toggle('hidden');
+        renderProjects();
+        if(adminActive) window.scrollTo({ top: adminPanel.offsetTop - 70, behavior: 'smooth' });
+    };
+}
 
-btnCloseAdmin.onclick = () => {
-    adminActive = false;
-    adminPanel.classList.add('hidden');
-    renderProjects();
-};
+// PROTECCIÓN: Solo se activa el botón de cerrar si existe en el HTML actual
+if (btnCloseAdmin && adminPanel) {
+    btnCloseAdmin.onclick = () => {
+        adminActive = false;
+        adminPanel.classList.add('hidden');
+        renderProjects();
+    };
+}
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const service = document.getElementById('service').value;
-    const img = document.getElementById('img').value;
-    const editIndex = document.getElementById('edit-index').value;
+// PROTECCIÓN: Solo se activa el listener del formulario si este existe
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const service = document.getElementById('service').value;
+        const img = document.getElementById('img').value;
+        const editIndex = document.getElementById('edit-index').value;
 
-    if (editIndex === "") {
-        projects.push({ name, service, img });
-    } else {
-        projects[editIndex] = { name, service, img };
-        document.getElementById('edit-index').value = "";
-    }
+        if (editIndex === "") {
+            projects.push({ name, service, img });
+        } else {
+            projects[editIndex] = { name, service, img };
+            document.getElementById('edit-index').value = "";
+        }
 
-    localStorage.setItem('projects', JSON.stringify(projects));
-    renderProjects();
-    form.reset();
-});
+        localStorage.setItem('projects', JSON.stringify(projects));
+        renderProjects();
+        form.reset();
+    });
+}
 
 function deleteProject(index) {
     if (confirm("¿Eliminar proyecto?")) {
@@ -83,11 +92,11 @@ function deleteProject(index) {
 
 function editProject(index) {
     const proj = projects[index];
-    document.getElementById('name').value = proj.name;
-    document.getElementById('service').value = proj.service;
-    document.getElementById('img').value = proj.img;
-    document.getElementById('edit-index').value = index;
-    window.scrollTo({ top: adminPanel.offsetTop - 70, behavior: 'smooth' });
+    if (document.getElementById('name')) document.getElementById('name').value = proj.name;
+    if (document.getElementById('service')) document.getElementById('service').value = proj.service;
+    if (document.getElementById('img')) document.getElementById('img').value = proj.img;
+    if (document.getElementById('edit-index')) document.getElementById('edit-index').value = index;
+    if (adminPanel) window.scrollTo({ top: adminPanel.offsetTop - 70, behavior: 'smooth' });
 }
 
 renderProjects();
