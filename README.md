@@ -2,24 +2,27 @@
 
 Aplicación web desarrollada para gestionar procesos de transformación digital en pequeñas empresas.
 
-## Tecnologías utilizadas
-- Node.js
-- Express
-- MongoDB
-- HTML, CSS, JavaScript
+## 🚀 Demo en vivo
+[Haz clic aquí para ver 01RedByte funcionando](01RedByte | Soluciones Digitales)
 
-## Estructura del proyecto
-- /backend → Lógica del servidor
-- /frontend → Interfaz de usuario
-- /imagenes → Recursos gráficos
+## 🛠️ Tecnologías utilizadas
+* **Frontend:** HTML5, CSS3, JavaScript
+* **Backend:** Node.js, Express
+* **Base de datos:** MongoDB
+* **Despliegue:** Vercel
 
-## Funcionalidades
-- Registro de usuarios
-- Gestión de información
-- Visualización de datos
+## 📂 Estructura del proyecto
+* `/backend` → Lógica del servidor
+* `/frontend` → Interfaz de usuario
+* `/imagenes` → Recursos gráficos
 
-## Pruebas
-Se plantea realizar pruebas con 5 usuarios, buscando un 90% de éxito en las funcionalidades principales.
+## ✨ Funcionalidades
+* Registro de usuarios.
+* Gestión y administración de proyectos.
+* Visualización de vitrina digital.
 
-## Autor
-- Jairo Casas
+## 🧪 Pruebas
+Se implementaron pruebas unitarias con **Jest** para validar la lógica del renderizado y el manejo de datos, asegurando un 90% de éxito en las funcionalidades principales.
+
+## 👨‍💻 Autor
+**Jairo Casas**
