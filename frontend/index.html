@@ -47,14 +47,13 @@
             </div>
         </section>
 
-        <section id="admin-panel" class="admin hidden">
+        <section id="admin-panel" style="display: none;" class="admin">
             <div class="container">
                 <h2 class="section-title">Panel Administrativo</h2>
                 <form id="project-form" class="admin-form">
                     <input type="text" id="name" placeholder="Nombre del negocio" required>
                     <input type="text" id="service" placeholder="Tipo de servicio" required>
-                    <input type="text" id="img" placeholder="Ruta de imagen (ej: imagenes/proyecto1.png)" required>
-                    <input type="hidden" id="edit-index">
+                    <input type="text" id="img" placeholder="Ruta de imagen (ej: imagenes/barberia.jpg)" required>
                     <div class="admin-buttons">
                         <button type="submit" class="btn-primary">Guardar Proyecto</button>
                         <button type="button" id="btn-close-admin" class="btn-outline">Salir de Admin</button>
@@ -67,24 +66,21 @@
             <div class="container">
                 <h2 class="section-title">Nuestra Vitrina</h2>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px; max-width: 1200px; margin: 0 auto;">
-                
+            <div id="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px; max-width: 1200px; margin: 0 auto;">
                 <div style="border: 1px solid #222; border-radius: 12px; background-color: #0d0d0d; color: #fff; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.5);">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&q=80" alt="Barbería" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #222;">
+                    <img src="imagenes/Imagen Barberia.jpg" alt="Barbería" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #222;">
                     <div style="padding: 20px;">
                         <h3 style="margin: 0 0 10px 0; font-size: 1.4em; color: #fff;">Barbería Classic Style</h3>
                         <p style="color: #007bff; font-size: 0.9em; margin: 0 0 15px 0; font-weight: bold; text-transform: uppercase;">Estética y Barbería</p>
-                        <a href="https://facebook.com" target="_blank" style="display: block; text-align: center; background-color: #111; color: #fff; border: 1px solid #333; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9em;">Visitar Negocio →</a>
+                        <a href="#" style="display: block; text-align: center; background-color: #111; color: #fff; border: 1px solid #333; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9em;">Visitar Negocio →</a>
                     </div>
                 </div>
-
                 <div style="border: 1px solid #222; border-radius: 12px; background-color: #0d0d0d; color: #fff; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.5);">
-                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&q=80" alt="Peluquería Canina" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #222;">
+                    <img src="imagenes/Imagen peluqueria canina.jpg" alt="Peluquería Canina" style="width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #222;">
                     <div style="padding: 20px;">
                         <h3 style="margin: 0 0 10px 0; font-size: 1.4em; color: #fff;">Variedades Estilo & Mascotas</h3>
                         <p style="color: #007bff; font-size: 0.9em; margin: 0 0 15px 0; font-weight: bold; text-transform: uppercase;">Cuidado Canino</p>
-                        <a href="https://instagram.com" target="_blank" style="display: block; text-align: center; background-color: #111; color: #fff; border: 1px solid #333; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9em;">Visitar Negocio →</a>
+                        <a href="#" style="display: block; text-align: center; background-color: #111; color: #fff; border: 1px solid #333; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9em;">Visitar Negocio →</a>
                     </div>
                 </div>
             </div>
@@ -106,6 +102,8 @@
         <div class="container">
             <p>&copy; 2026 01RedByte - Reduciendo la brecha digital</p>
         </div>
-    </footer >
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
